@@ -8,42 +8,17 @@ import { useContext } from 'react';
 
 const Home = () => {
 
-    const { f1 , addFood1 ,
-            f2 , addFood2 ,
-            f3 , addFood3 ,
-            f4 , addFood4 ,
-            f5 , addFood5 ,
-            readAPI, addReadAPI
-             } = useContext(AppContext);
-    
+    const  {f1} = useContext(AppContext);
+    //const recipe = f1[0]?.recipe;
 
-    let food1 , food2 ,food3 ,food4 ,food5 ;
-
-    if(readAPI === false){
-        food1 = useGetRecommended('chicken');
-        food2 = useGetRecommended('Meat');
-        food3 = useGetRecommended('bbq');
-        food4 = useGetRecommended('fast');
-        food5 = useGetRecommended('pasta');
-
-        setTimeout(() => {
-            addFood1(food1); 
-            addFood2(food2); 
-            addFood3(food3); 
-            addFood4(food4); 
-            addFood5(food5); 
-            addReadAPI(!readAPI);
-        }, 1000);
-    }
+    //console.log(recipe?.ingredients);
    
      return (
         <div className="home">
-            <Recommended q ={ f1[0] }/>
-            <Recommended q ={ f2[0] }/>
-            <Recommended q ={ f3[0] }/>
-            <Recommended q ={ f4[0] }/>
+           <Recommended q ={ f1[0]?.recipe }/>
         </div>
     );
 }
 
+ //
 export default Home;

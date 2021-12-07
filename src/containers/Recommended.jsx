@@ -3,17 +3,19 @@ import RecommendedList from '@components/RecommendedList';
 import useGetRecommended from '@hooks/useGetRecommended';
 
 
-const Recommended = ( reco ) => {
+const Recommended = ( recipe ) => {
 
-    const food = reco.q?.recipe;
+    const food = recipe.q;
+
+    //console.log(food);
 
     return (
         <div>
-            <RecommendedList recipe = {food} /> 
+           <RecommendedList recipe = {food} />
         </div>
     );
 }
 
 export default Recommended;
 
-//
+//  
