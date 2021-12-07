@@ -8,7 +8,7 @@ import { useContext } from 'react';
 
 const Home = () => {
 
-    const  {f1} = useContext(AppContext);
+    const  {f1 , f2 , f3, f4 , f5 } = useContext(AppContext);
     //const recipe = f1[0]?.recipe;
 
     //console.log(recipe?.ingredients);
@@ -16,6 +16,10 @@ const Home = () => {
      return (
         <div className="home">
            <Recommended q ={ f1[0]?.recipe }/>
+           <Recommended q ={ f2[0]?.recipe }/>
+           <Recommended q ={ f3[0]?.recipe }/>
+           <Recommended q ={ f4[0]?.recipe }/>
+           <Recommended q ={ f5[0]?.recipe }/>
         </div>
     );
 }
