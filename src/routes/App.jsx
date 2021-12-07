@@ -25,6 +25,11 @@ const App = () => {
                 <Header />
                     <Switch>
                         <Route exact path= "/" component={Home} />
+                        <Route exact path= "/chicken" component={Chicken}/>
+                        <Route exact path= "/meat" component={Meat}/>
+                        <Route exact path= "/bbq" component={Bbq}/>
+                        <Route exact path= "/fastfood" component={FastFood}/>
+                        <Route exact path= "/pasta" component={Pasta}/>
                     </Switch>
                 </Layout>
             </BrowserRouter>    
