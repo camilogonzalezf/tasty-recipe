@@ -8,7 +8,7 @@ const useGetRecipes = (food) => {
    
     //console.log(food);
 
-   //const API = `http://api.edamam.com/search?app_id=${API_ID}&app_key=${API_KEY}&q=${food}&to=20`;
+   const API = `http://api.edamam.com/search?app_id=${API_ID}&app_key=${API_KEY}&q=${food}&to=20`;
     const [recipes, setRecipes] = useState([]);
     useEffect(async () => {
         const response = await axios(API);
@@ -16,7 +16,6 @@ const useGetRecipes = (food) => {
     },[]);
         
     return  {recipes};
-        
 }
 
 export default useGetRecipes;

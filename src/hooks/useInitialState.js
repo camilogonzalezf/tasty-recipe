@@ -11,12 +11,13 @@ const useInitialState = () => {
     const [f3 , setFood3] = useState([]);
     const [f4 , setFood4] = useState([]);
     const [f5 , setFood5] = useState([]);
+    const [searchText , setSearchText] = useState(''); 
 
     const food1 = 'chicken';
     const API1 = `http://api.edamam.com/search?app_id=${API_ID}&app_key=${API_KEY}&q=${food1}&to=20`;
 
     const food2 = 'meat';
-    const API2 = `http://api.edamam.com/search?app_id=${API_ID}&app_key=${API_KEY}&q=${food2}&to=20`;
+   const API2 = `http://api.edamam.com/search?app_id=${API_ID}&app_key=${API_KEY}&q=${food2}&to=20`;
 
     const food3 = 'bbq';
     const API3 = `http://api.edamam.com/search?app_id=${API_ID}&app_key=${API_KEY}&q=${food3}&to=20`;
@@ -53,9 +54,12 @@ const useInitialState = () => {
         setFood5(response.data.hits);      
     },[]);
 
+    const addSearch = (searchText) =>{
+        setSearchText(searchText);
+    }
 
     return{
-        f1, f2 , f2, f3 , f4 , f5
+        f1, f2 , f2, f3 , f4 , f5 , addSearch
     }
 }
 

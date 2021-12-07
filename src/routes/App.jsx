@@ -30,6 +30,7 @@ const App = () => {
                         <Route exact path= "/bbq" component={Bbq}/>
                         <Route exact path= "/fastfood" component={FastFood}/>
                         <Route exact path= "/pasta" component={Pasta}/>
+                        <Route exact path= "/search" component={Search}/>
                     </Switch>
                 </Layout>
             </BrowserRouter>    
