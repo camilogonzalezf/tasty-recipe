@@ -8,7 +8,7 @@ import AppContext from '@context/AppContext';
 const Search = () => {
 
 
-    const { searchText } = useContext(AppContext);
+    const {searchText} = useContext(AppContext);
 
     const {recipes} = useGetRecipes(searchText); 
 
