@@ -1,0 +1,164 @@
+@import 'vars';
+
+nav{
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+    background: var(--gray);
+    align-items: center;
+}
+
+.div-iconMenu{
+    width: 30px;
+    display: none;
+}
+
+.svg-inline--fa{
+    color: var(--white);
+}
+
+.navbar-left {
+    width: 100%;
+    display: flex;
+}
+
+.navbar-right {
+    width: 180px;
+    height: 30px;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    align-items: center;
+    margin: auto 20px;
+    padding: 5px 10px;
+}
+
+.navbar-right input {
+    width: 120px;
+    outline: none;
+   border: none;
+}
+
+.navbar-right img {
+    width: 20px;
+    margin-left: 5px
+}
+
+.navbar-left ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;  
+}
+
+.div-nav-mobile-false {
+    height: 320px;
+    position: absolute;
+    top: 245px;
+    left: 0px;
+    margin-left: -100%;
+    transition: 500ms 600ms;
+}
+
+.div-nav-mobile-active {
+    height: 320px;
+    position: absolute;
+    top: 245px;
+    left: 0px;
+    transition: 500ms;
+    margin-left: 0;
+}
+
+
+.nav-mobile {
+    height: 100%;
+    background: var(--gray);
+}
+
+
+.nav-mobile ul{
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-left ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;  
+}
+
+.nav-mobile ul li{
+    height: 50px;
+    list-style: none;
+}
+
+.nav-mobile ul li a{
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 30px;
+}
+
+.navbar-left ul li a{
+    height: 45px;
+    width: 100%;
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.navbar-left ul li:hover{
+    background: var(--orange);
+}
+
+.active{
+    background: var(--orange);
+}
+
+.deploy {
+    margin-left: 0;
+}
+
+@media (max-width: 850px) {
+    nav{
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    .navbar-left {
+        display: none;
+    }
+
+    .div-iconMenu{
+        display: block;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .div-container__text p{
+        font-size: 12px;
+    }
+    .nav-mobile {
+        display: block;
+    }
+ }
+
+ @media (max-width: 460px) {
+     nav{
+         min-width: 360px;
+     }
+ }

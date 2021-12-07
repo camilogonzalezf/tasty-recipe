@@ -1,0 +1,40 @@
+@import 'vars';
+
+.RecipeItem{
+    background: linear-gradient(rgb(219, 212, 212),var(--white));
+    width: 240px;
+    border: 1px solid rgb(192, 187, 187);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.RecipeItem h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    color: var(--coffee-bar);
+}
+.RecipeItem img{
+    width: 200px;
+    border-radius: 10px;
+}
+
+.RecipeItem h3 a {
+    text-decoration: none;
+    color: var(--orange);
+    font-size: 20px;
+}
+
+@media (max-width: 640px) {
+	.RecipeItem {
+		width: 140px;
+	}
+
+    .RecipeItem img{
+        width: 100px;
+    }
+}

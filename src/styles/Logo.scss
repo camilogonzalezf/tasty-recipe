@@ -1,0 +1,24 @@
+@import 'vars';
+
+.logo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-bar{
+    width: 100%;
+    height: 10px;
+    background: var(--coffee-bar);
+}
+
+.logo-logo {
+    width: 150px;
+}
+
+.logo-p{
+    font-family: 'Roboto';
+    font-size: var(--lg);
+}
