@@ -23,7 +23,6 @@ const Recommended = ( {recipe} ) => {
     labels = labels + '.';
     const recipeLabel = '/'+recipe?.label;
 
-
     return (
         <div>
             <div className="div-desktop">
